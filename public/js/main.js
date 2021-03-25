@@ -1,5 +1,5 @@
 const fetchData = async () => {
-  const data = await fetch('http://localhost:1337/posts');
+  const data = await fetch('https://itexploblog.herokuapp.com/posts');
   const jsonData = await data.json();
   return jsonData;
 }
@@ -17,7 +17,7 @@ const showData = async () => {
          <a href="#${blog.id}">
           <div class="blog-teaser">
             <div class="image-wrap">
-              <img src="http://localhost:1337${blog.thumbnail.url}">
+              <img src="https://itexploblog.herokuapp.com${blog.thumbnail.url}">
             </div>
             <div class="title-wrap">
               <p>${blog.Title}</p>
@@ -45,7 +45,7 @@ const showBlogs = async () => {
       blogStr += `
         <section class="blog-post" id="${post.id}">
           <div class="blog-banner">
-            <img src="http://localhost:1337${post.thumbnail.url}">
+            <img src="https://itexploblog.herokuapp.com${post.thumbnail.url}">
           </div>
           <div class="blog-body">
             <h2>${post.Title}</h2>
